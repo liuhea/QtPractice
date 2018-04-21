@@ -3,12 +3,17 @@
 # Project created by QtCreator 2018-04-20T20:33:18
 #
 #-------------------------------------------------
+#  模块
 
 QT       += core gui
 
+# 高于4版本，添加QT += widgets, 为了兼容Qt4
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+# 应用程序名字
 TARGET = day1
+
+# 指定makefile的类型，app 或者lib
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -22,11 +27,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-
+# 源文件，.cpp文件
 SOURCES += \
         main.cpp \
         mainwindow.cpp
 
+# 头文件，.h文件
 HEADERS += \
         mainwindow.h
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/liuhe/workspace/QtProjects/QtPractice/build-day1-Android_for_armeabi_v7a_GCC_4_9_Qt_5_10_1_android_armv7-Debug/android-build/libs/QtAndroid-bundled.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="5fe3be9a3a22be3299386555866ebc284be5e1cf">
+        <dex dex="/Users/liuhe/workspace/QtProjects/QtPractice/build-day1-Android_for_armeabi_v7a_GCC_4_9_Qt_5_10_1_android_armv7-Debug/android-build/build/intermediates/pre-dexed/debug/QtAndroid-bundled_7f16751a40b68fa68173ac493cfbe4189677bb05.jar" />
+    </item>
+
+</items>

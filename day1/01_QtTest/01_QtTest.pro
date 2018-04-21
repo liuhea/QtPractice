@@ -1,10 +1,9 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-04-20T20:33:18
+# Project created by QtCreator 2018-04-22T00:21:43
 #
 #-------------------------------------------------
 #  模块
-
 QT       += core gui
 
 # 高于4版本，添加QT += widgets, 为了兼容Qt4
@@ -12,7 +11,6 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 # 应用程序名字
 TARGET = 01_QtTest
-
 # 指定makefile的类型，app 或者lib
 TEMPLATE = app
 
@@ -31,11 +29,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp
-
 # 头文件，.h文件
 HEADERS += \
         mainwindow.h
-
-CONFIG += mobility
-MOBILITY = 
-

@@ -40,7 +40,14 @@ MainWindow::MainWindow(QWidget *parent)
         * 槽函数：接收短信的手机
         */
 
-      //函数重载的情况
+
+      /*
+       *信号重载时候，
+       * Qt处理方式：使用slots关键字;但是SIGNAL SLOT将函数名字转换成字符串，不进行错误检查。
+       *
+       * connect(&sub,SIGNAL(mySignal()),this,SLOT(dealSub());
+       *
+       */
       void (SubWidget::*funSignal)()=&SubWidget::mySignal;
       void (SubWidget::*testSignal)(int,QString)=&SubWidget::mySignal;
 

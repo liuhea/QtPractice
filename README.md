@@ -25,3 +25,16 @@ qt学习记录
 * Qt Location，提供定位机制、地图和导航技术、位置搜索等功能的 QML 和 C++ API。
 * Qt Widgets，使用 C++ 扩展的 Qt Gui 模块，提供了一些界面组件，比如按钮、单选框等。
 
+## 信号和槽
+> Qt对象通信的接口
+
+```
+/**
+* &b 信号发出者，指针类型
+* &QPushButton::pressed 处理的信号，格式：&发送者::信号名字
+* this 信号接收者
+* &MainWidget::close 槽函数（信号处理函数）格式： &接收者类名::槽函数名字
+*/
+connect(&b,&QPushButton::pressed,this,&MainWidget::close)
+	
+```

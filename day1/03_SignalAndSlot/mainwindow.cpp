@@ -2,7 +2,7 @@
 #include <QPushButton>
 #include "subwidget.h"
 
-
+// 信号和槽：Qt对象之间通信的接口
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
@@ -14,12 +14,13 @@ MainWindow::MainWindow(QWidget *parent)
     b2->show();
 
     /* &b1: 信号发出者，指针类型
-     * &QPushButton::pressed： 处理信号， &发送者的类名::信号名称
+     * &QPushButton::pressed： 处理的信号， &发送者的类名::信号名称
      *
      * this: 信号接收者
      * &MainWindow::close： 槽函数，信号处理函数 &接收者类名::槽函数名字
      *
      */
+
    connect(&b1,&QPushButton::pressed,this,&MainWindow::close);
 
    /*

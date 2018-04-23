@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
     //-----------------------start 我们要写代码区域-------------------
     // 继承自QWidget，是一个窗口基类
     // 所以是一个QWidget也是一个窗口类，w是一个窗口。
+    // w 是执行了MainWindow的构造函数
     MainWindow w;
     // 窗口默认创建是隐藏的，需要手动显示
     w.show();

@@ -21,9 +21,11 @@ public:
      */
     void mySlot();
 
+
     void changeWindow();
 
     void dealSub();
+    void dealSlot(int i,QString s);
 
 private:
     QPushButton b1;

@@ -23,6 +23,9 @@ signals:
     // 使用：emit mySignal();
     void mySignal();
 
+    void mySignal(int a,QString s);
+
+
 public slots:
 };
 

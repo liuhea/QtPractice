@@ -15,4 +15,7 @@ SubWidget::SubWidget(QWidget *parent) : QWidget(parent)
 
 void SubWidget::sendSlot(){
     emit mySignal();
+    emit mySignal(22,"liuhe");
+
 }
+

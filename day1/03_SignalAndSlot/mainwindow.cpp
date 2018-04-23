@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include <QPushButton>
 #include "subwidget.h"
+#include<QDebug>
 
 // 信号和槽：Qt对象之间通信的接口
 MainWindow::MainWindow(QWidget *parent)
@@ -38,13 +39,24 @@ MainWindow::MainWindow(QWidget *parent)
         * 信号：短信
         * 槽函数：接收短信的手机
         */
-      connect(&sub,&SubWidget::mySignal,this,&MainWindow::dealSub);
+
+      //函数重载的情况
+      void (SubWidget::*funSignal)()=&SubWidget::mySignal;
+      void (SubWidget::*testSignal)(int,QString)=&SubWidget::mySignal;
+
+      connect(&sub,funSignal,this,&MainWindow::dealSub);
+
+      connect(&sub,testSignal,this,&MainWindow::dealSlot);
 
       resize(300,300);
 }
 
 void MainWindow::mySlot(){
     b2->setText("Change ");
+}
+
+void MainWindow::dealSlot(int i,QString str){
+   qDebug() <<i << str;
 }
 
 /**

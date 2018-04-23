@@ -11,6 +11,8 @@ class SubWidget : public QWidget
 public:
     explicit SubWidget(QWidget *parent = nullptr);
 
+    void sendSlot();
+
 private:
     QPushButton b1;
 

@@ -3,8 +3,9 @@
 
 #include <QMainWindow>
 #include <QPushButton>
-//#include "subwidget.h"
+
 //子窗口头文件
+#include "subwidget.h"
 
 class MainWindow : public QMainWindow
 {
@@ -20,12 +21,15 @@ public:
      */
     void mySlot();
 
+    void changeWindow();
+
+    void dealSub();
+
 private:
     QPushButton b1;
     QPushButton *b2;
-    QPushButton b3;
 
-//    SubWidget sub;
+    SubWidget sub;
 
 };
 

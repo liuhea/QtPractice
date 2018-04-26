@@ -30,6 +30,7 @@ public:
 private:
     QPushButton b1;
     QPushButton *b2;
+    QPushButton *b3;
 
     SubWidget sub;
 

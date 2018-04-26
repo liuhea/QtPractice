@@ -55,6 +55,22 @@ MainWindow::MainWindow(QWidget *parent)
 
       connect(&sub,testSignal,this,&MainWindow::dealSlot);
 
+
+      // Lambda表达式，匿名函数对象
+      // C++11增加的新特性，项目文件 CONFIG += C++11
+      // Qt配合信号使用，非常方便。
+        b3=new QPushButton(this);
+        b3->setText("Lambda表达式");
+        int a = 10, b= 100;
+        b3->move(150,150);
+
+        connect(b3,&QPushButton::clicked,this,[=](){
+            // == 把外部所有局部变量、类中的所有成员及值传递方式
+            // this 类中所有成员以值传递方式
+            // & 把外部所有局部变量，引用符号。
+            qDebug() << a << b;
+        });
+
       resize(300,300);
 }
 
